@@ -1,6 +1,6 @@
 # CBP Player Colors/Numbers Overlay Plugin (CBP-PCN-Plugin)
 
-A simple plugin for [CBP Launcher](https://github.com/MHLoppy/CBP-Launcher) that modifies the interface.xml file used by Rise of Nations to add an overlay with player colors/numbers used by taunts (90-97).
+A [simple plugin](https://steamcommunity.com/sharedfiles/filedetails/?id=2724439438) for [CBP Launcher](https://github.com/MHLoppy/CBP-Launcher) that modifies the interface.xml file used by Rise of Nations to add an overlay with player colors/numbers used by taunts (90-97).
 
 This can help to understand communication from other players even if you don't have the full list of player colors<->numbers memorised. E.g. "can you tower relics please 95"
 
