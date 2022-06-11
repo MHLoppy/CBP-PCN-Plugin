@@ -27,7 +27,7 @@ namespace CBP_PCN_Plugin
     public class PlayerColorNumber : IPluginCBP
     {
         public string PluginTitle => "Player Color/Number Overlay";
-        public string PluginVersion => "0.1.1";
+        public string PluginVersion => "0.1.2";
         public string PluginAuthor => "MHLoppy";
         public bool CBPCompatible => true;
         public bool DefaultMultiplayerCompatible => true;
@@ -159,10 +159,15 @@ namespace CBP_PCN_Plugin
                 // remove texture UPDATE: DON'T
                 //File.Delete(texPathLocal);
 
-                // edit XML
+                // check to see if the current XML looks to be edited, and undo the edit if it is
                 if (CheckXML() == true)
                 {
                     RemoveXML();
+                }
+                else// if it's not edited, then somehow there's been a desync between load state and actual state
+                {
+                    LoadResult += "PCN did not find edited XML. ";
+                    MessageBox.Show("It doesn't look like the interface files actually had this plugin's edits applied. This might happen if you load/unload CBP after using this plugin.");
                 }
 
                 File.WriteAllText(loadedPCN, "0");
